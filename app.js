@@ -1,9 +1,9 @@
 var express = require('express');
 var app = express();
+var routes = require('./server/routes/index.js');
+//var path = require('path');
 
-app.get('/', function(req,res){
-	res.send("hi");
-});
+app.use(routes);
 
 var PORT = process.env.PORT || 1337;
 

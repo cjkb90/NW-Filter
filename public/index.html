@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Northwind Filter</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js" defer></script>
+	<!-- Custom Angular files -->
+	<script src="/browser/main.js" defer></script>
+	<script src="/browser/products/controller.js" defer></script>
+	<script src="/browser/products/factory.js" defer></script>
+</head>
+
+<body ng-app="app">
+	<div class="container">
+		<div class="col-xs-1"><a href="/">Home</a></div>
+		<div class="col-xs-1"><a href="/products">Products</a></div>
+		<div class="col-xs-1"><a href="/employees">Employees</a></div>
+	</div>
+	<h3>Welcome to NW Filters</h3>
+	<div ng-controller="ProductCtrl">
+		<div class="col-xs-12 container">
+			<a ng-repeat="letter in alphabet" class="col-xs-1" href="#">{{letter}}</a>
+		</div>
+	</div>
+</body>
+</html>
