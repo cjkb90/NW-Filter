@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var routes = require('./server/routes/index.js');
-//var path = require('path');
+
 
 app.use(routes);
 

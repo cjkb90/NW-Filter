@@ -1,3 +1,4 @@
 <div class="col-xs-12 container">
-	<a ng-repeat="letter in alphabet" class="col-xs-1" href="#">{{letter}}</a>
+	<a ng-repeat="letter in alphabet" class="col-xs-1" ui-sref=products.list({letter:letter})>{{letter}}</a>
 </div>
+<ui-view></ui-view>
