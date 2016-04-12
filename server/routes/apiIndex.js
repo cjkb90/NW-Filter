@@ -11,8 +11,22 @@ router.get('/products/all', function(req, res){
 	})
 });
 
+router.get('/products/letter/findOne/:letter', function(req,res){
+	var letter = new RegExp('^'+req.params.letter,'i');
+	Product.findOne({
+		"name": { "$regex": letter } 
+	})
+	.then(function(response){
+		if(response){
+			res.send(true);
+		}
+		else {
+			res.send(false);
+		}
+	})
+});
+
 router.get('/products/letter/:letter', function(req,res){
-	//
 	var letter = new RegExp('^'+req.params.letter,'i');
 	Product.find({
 		"name": { "$regex": letter } 

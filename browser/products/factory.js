@@ -14,5 +14,12 @@ app.factory('ProductFactory', function($http){
 		})
 	}
 
+	ProductFactory.letterExists = function(letter){
+		return $http.get('api/products/letter/findOne/' + letter)
+		.then(function(response){
+			return response.data;
+		})
+	}
+
 	return ProductFactory;
 });
