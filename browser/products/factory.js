@@ -8,13 +8,14 @@ app.factory('ProductFactory', function($http){
 	ProductFactory.getList = function(letter){
 		return $http.get('/api/products/letter/' + letter)
 		.then(function(response){
-			//console.log(response.data);
-			return(response.data)
+			console.log(response.data);
+			return(response.data);
 
 		})
 	}
 
 	ProductFactory.letterExists = function(letter){
+    console.log('i am never called');
 		return $http.get('api/products/letter/findOne/' + letter)
 		.then(function(response){
 			return response.data;

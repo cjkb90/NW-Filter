@@ -8,7 +8,7 @@ router.get('/products/all', function(req, res){
 	Product.find()
 	.then(function(response){
 		res.send(response);
-	})
+	});
 });
 
 router.get('/products/letter/findOne/:letter', function(req,res){
@@ -33,7 +33,7 @@ router.get('/products/letter/:letter', function(req,res){
 	})
 	.then(function(response){
 		res.send(response);
-	})
+	});
 });
 
 router.get('/products/add/:prodName', function(req, res){

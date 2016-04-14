@@ -1,0 +1,10 @@
+- no readme?
+- good effort
+- put in a seed script
+- why the public directory?
+- do some more planning before writing code
+- thing about file naming and route naming
+- plan out your routes better
+- you really should only have two routes
+- /api/products/map - get's a list of active letters
+- /api/producst/:letter - get's a list of products with a letter
